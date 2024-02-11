@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "the-news-room",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

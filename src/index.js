@@ -16,7 +16,7 @@ const App = () => {
   }, [country, page]);
   const fetchNews = async () => {
     setData([]);
-    const data = await axios.get(
+    const data = await axios.get('https://corsproxy.org/?'+ encodeURIComponent(
       process.env.ENDPOINT +
         "top-headlines?country=" +
         country +
@@ -26,7 +26,7 @@ const App = () => {
         page +
         "&apiKey=" +
         process.env.KEY
-    );
+    ));
     setData(data);
     setTotalArticles(data.data.totalResults);
   };
